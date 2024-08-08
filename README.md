@@ -480,6 +480,9 @@ kubectl get ing -n three-tier-ns
 
 
 - Now hit domain name on chrome browser (**challenge.akshaydhongade.online**)
+
+
+  
 - Create some operations on todo list app
 - and check in your database created entry is exist in database or not 
 
