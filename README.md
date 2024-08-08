@@ -35,10 +35,9 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 sudo ./aws/install
 
+### Step 4: Install Docker
 
-# Step 4: Install Docker
-
+```bash
 sudo apt-get update
 sudo apt install docker.io
-docker ps
-sudo chown $USER /var/run/docker.sock
+
