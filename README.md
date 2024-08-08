@@ -508,10 +508,10 @@ kubectl get ing -n three-tier-ns
     show dbs
    ```
 
-4) to use specific databse use below command
+4) to use specific database use below command
 
     ```bash
-    use myDatabase
+    use todo
     ```
 5) To see tables inside that specific choees database use below command 
 
@@ -521,7 +521,7 @@ kubectl get ing -n three-tier-ns
 6) To see Records of table use below command
 
     ```bash
-   db.collectionName.find()
+   db.tasks.find()
     ```     
 ![image](https://github.com/user-attachments/assets/7534c508-f28c-4afa-8ec4-cb218d171379)  
 
