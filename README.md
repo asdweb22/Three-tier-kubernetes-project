@@ -174,6 +174,17 @@ you will see frontend app
 ![image](https://github.com/user-attachments/assets/c5435eee-fdff-44ea-a5ed-e7f999e03402)
 
 
+- Create repository on ECR for backend and push Docker image of BACKEND IMAGE
+
+  ![image](https://github.com/user-attachments/assets/67d7feaa-3ed1-42a3-9fff-1bb81aac10ba)
+
+  ![image](https://github.com/user-attachments/assets/3d0eddc6-9933-4e20-99ea-65080428b89c)
+
+
+
+
+
+
 
 
 
