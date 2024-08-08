@@ -354,7 +354,89 @@ kubectl get svc -n three-tier-ns
 
 <h5 style="color:red;">Note: till now frontend pod is running state , backend and databse is now running properly and connected to each other
 
-  
+![image](https://github.com/user-attachments/assets/e0461422-2681-4db7-bbc6-96da74e1ab75)
+
+
+
+# Step 13 :  To Install AWS Load Balancer and Deploy AWS Load Balancer Controller follow below steps
+
+  ### Steps to setup ingress controller
+
+
+1. create an OIDC provider, use below link and follow steps
+https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
+
+![image](https://github.com/user-attachments/assets/ee5e124d-4163-4b34-a8ed-568b3e651964)
+
+2. Create IAM role
+
+<h5 style="color:red;">Link :  https://docs.aws.amazon.com/eks/latest/userguide/lbc-manifest.html
+
+```bash
+curl -O https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.7.2/docs/install/iam_policy.json
+aws iam create-policy \
+    --policy-name AWSLoadBalancerControllerIAMPolicy10 \
+    --policy-document file://iam_policy.json
+```
+
+![image](https://github.com/user-attachments/assets/251e81bf-c07b-4f33-81cf-d966b5ca68e8)
+
+
+<h5 style="color:red;">Note:   replace the ARN with policy's ARN below
+
+```bash
+eksctl create iamserviceaccount \
+  --cluster=three-tier-cluster \
+  --namespace=kube-system \
+  --name=aws-load-balancer-controller \
+  --role-name AmazonEKSLoadBalancerControllerRole10 \
+  --attach-policy-arn=arn:aws:iam::590184143627:policy/AWSLoadBalancerControllerIAMPolicy10 \
+  --approve
+```
+
+  ![image](https://github.com/user-attachments/assets/d668f982-1a6d-4c76-a652-df85db34c350)
+
+
+
+3. Install cert manager
+
+```bash   
+kubectl apply \
+    --validate=false \
+    -f https://github.com/jetstack/cert-manager/releases/download/v1.13.5/cert-manager.yaml
+```
+
+![image](https://github.com/user-attachments/assets/5c216c0e-ef1d-4a8b-9a65-3a3e11c72064)
+
+
+4. install AWS load balancer controller
+
+```bash
+curl -Lo v2_7_2_full.yaml https://github.com/kubernetes-sigs/aws-load-balancer-controller/releases/download/v2.7.2/v2_7_2_full.yaml
+
+sed -i.bak -e '612,620d' ./v2_7_2_full.yaml
+
+sed -i.bak -e 's|your-cluster-name|my-cluster|' ./v2_7_2_full.yaml
+
+kubectl apply -f v2_7_2_full.yaml
+
+curl -Lo v2_7_2_ingclass.yaml https://github.com/kubernetes-sigs/aws-load-balancer-controller/releases/download/v2.7.2/v2_7_2_ingclass.yaml
+
+kubectl apply -f v2_7_2_ingclass.yaml
+```
+
+
+![image](https://github.com/user-attachments/assets/9cfe3af1-9391-4bc3-802c-bc3c5c7fa777)
+
+
+5. verify
+
+```bash
+kubectl get deployment -n kube-system aws-load-balancer-controller
+```
+
+![image](https://github.com/user-attachments/assets/632379c5-720f-4cc2-ae0e-6755967e649d)
+
 
 
 
