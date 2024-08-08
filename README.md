@@ -176,9 +176,21 @@ you will see frontend app
 
 - Create repository on ECR for backend and push Docker image of BACKEND IMAGE
 
-  ![image](https://github.com/user-attachments/assets/67d7feaa-3ed1-42a3-9fff-1bb81aac10ba)
 
   ![image](https://github.com/user-attachments/assets/3d0eddc6-9933-4e20-99ea-65080428b89c)
+
+
+  ![image](https://github.com/user-attachments/assets/67d7feaa-3ed1-42a3-9fff-1bb81aac10ba
+
+
+  Provide 3500 port in instance security group inbound rule
+  
+  ![image](https://github.com/user-attachments/assets/8bb29266-5548-4d7c-9a66-630a9268da9a)
+
+  Run Docker container using docker image
+
+  ![image](https://github.com/user-attachments/assets/c68f39e0-4dcb-46cb-9a02-d14382ab8417)
+  Note: We will get a error which could not connect  mongo Db Database 
 
 
 
