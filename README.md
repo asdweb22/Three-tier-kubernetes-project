@@ -163,6 +163,9 @@ create container using already created image
 
 ![image](https://github.com/user-attachments/assets/0613b3f4-babf-4e14-b259-f134a01f65c6)
 
+```bash
+  docker run -d -p 3000:3000 three-tier-frontend:latest 
+```
 
 Setup 3000 port in inbound rule of main instance 
 
@@ -189,6 +192,16 @@ you will see frontend app
 
   Run Docker container using docker image
 
+  ```bash
+  docker run -d -p 3500:3500 three-tier-backend:latest
+  ```
+  - to check backemnd run successfully or not
+
+  ```bash
+  docker logs backend_container_id
+  ```
+  
+  docker run 
   ![image](https://github.com/user-attachments/assets/c68f39e0-4dcb-46cb-9a02-d14382ab8417)
   Note: We will get a error which could not connect  mongo Db Database 
 
