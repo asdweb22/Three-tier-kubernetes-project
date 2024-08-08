@@ -180,7 +180,7 @@ you will see frontend app
   ![image](https://github.com/user-attachments/assets/3d0eddc6-9933-4e20-99ea-65080428b89c)
 
 
-  ![image](https://github.com/user-attachments/assets/67d7feaa-3ed1-42a3-9fff-1bb81aac10ba
+  ![image](https://github.com/user-attachments/assets/67d7feaa-3ed1-42a3-9fff-1bb81aac10ba)
 
 
   Provide 3500 port in instance security group inbound rule
