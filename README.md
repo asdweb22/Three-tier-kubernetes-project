@@ -129,6 +129,18 @@ kubectl get nodes
 ![image](https://github.com/user-attachments/assets/af4d9ac5-7d21-426a-bcc3-7674b357e533)
 
 
+# Now take git clone whole project from given link
+
+![image](https://github.com/user-attachments/assets/662d85a2-7f46-4657-b8e9-b07a0b866b66)
+
+```bash
+git clone https://github.com/LondheShubham153/TWSThreeTierAppChallenge.git
+```
+
+![image](https://github.com/user-attachments/assets/1102afa5-7933-4536-bc40-233581e6d6f0)
+
+
+
 
 
 
