@@ -481,10 +481,50 @@ kubectl get ing -n three-tier-ns
 
 - Now hit domain name on chrome browser (**challenge.akshaydhongade.online**)
 
+![image](https://github.com/user-attachments/assets/83bb7535-7bbb-4a36-83f2-59b875da1323)
 
   
 - Create some operations on todo list app
-- and check in your database created entry is exist in database or not 
+  
+![image](https://github.com/user-attachments/assets/03f6ee4c-2898-4575-a5fc-24a732863ddb)
+  
+
+# Step 15 : check into your database created entry is exist in database table or not
+
+1) Below Command is use to go inside mongo db pod
+  
+```bash
+  kubectl exec -it <pod_name> -n <namespace> -- bash
+```
+
+2) After going inside mongo db pod we need to use mongo keyword
+
+```bash
+  mongo
+```
+3) To see all Databases inside mongo Db Env
+
+   ```bash
+    show dbs
+   ```
+
+4) to use specific databse use below command
+
+    ```bash
+    use myDatabase
+    ```
+5) To see tables inside that specific choees database use below command 
+
+   ```bash
+   show collections
+   ```
+6) To see Records of table use below command
+
+    ```bash
+   db.collectionName.find()
+    ```     
+![image](https://github.com/user-attachments/assets/7534c508-f28c-4afa-8ec4-cb218d171379)  
+
 
 
 
