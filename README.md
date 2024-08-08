@@ -41,8 +41,6 @@ Launch an Ubuntu instance in your favourite region (eg. region ap-south-1).
 ![image](https://github.com/user-attachments/assets/14dd20ad-3f91-40e8-91f4-5e0642b64ac4)
 
 
-
-
 SSH into the instance from your local machine.
 
 ![image](https://github.com/user-attachments/assets/45d51d57-31df-4a7d-9994-5db5f52089c1)
@@ -57,6 +55,7 @@ apt install unzip -y
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
+```
 
 ![image](https://github.com/user-attachments/assets/a7c8e320-d5ad-4b90-9a2e-a49ad5297f00)
 
@@ -67,6 +66,7 @@ sudo ./aws/install
 ```bash
 sudo apt-get update
 sudo apt install docker.io
+```
 
 ![image](https://github.com/user-attachments/assets/9c43f22d-94d4-4718-a12d-c1782b592741)
 
@@ -78,6 +78,7 @@ curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin
 kubectl version --short --client
+```
 
 ![image](https://github.com/user-attachments/assets/80fe0cf6-a5e3-4e96-9450-8bd8c95f05cc)
 
@@ -88,6 +89,7 @@ kubectl version --short --client
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
 sudo mv /tmp/eksctl /usr/local/bin
 eksctl version
+```
 
 ![image](https://github.com/user-attachments/assets/b2bfe6a8-1bb5-4d6a-bcb9-1d91db04c3bc)
 
@@ -97,6 +99,7 @@ eksctl version
 
 ```bash
 aws configure
+```
 
 ![image](https://github.com/user-attachments/assets/e8132954-2fb6-42a6-a869-4ac2769aba76)
 
@@ -107,6 +110,8 @@ aws configure
 eksctl create cluster --name three-tier-cluster --region us-west-2 --node-type t2.medium --nodes-min 2 --nodes-max 2
 aws eks update-kubeconfig --region us-west-2 --name three-tier-cluster
 kubectl get nodes
+```
+
 
 
 
