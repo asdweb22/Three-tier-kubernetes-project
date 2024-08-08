@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/0d89ba02-5d1c-40b0-87f8-767eda4e4337)# Three-tier-kubernetes-project
+# Three-tier-kubernetes-project
 Based on tools like docker, kubernetes, Ec2, EKS, ECR, Cloud Formation,  frontend: React js, backend : Node js, Database: Mongo DB     
 
 Project repo reference : https://github.com/LondheShubham153/TWSThreeTierAppChallenge/blob/main/README.md
