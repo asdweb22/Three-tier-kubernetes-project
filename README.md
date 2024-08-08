@@ -525,7 +525,23 @@ kubectl get ing -n three-tier-ns
     ```     
 ![image](https://github.com/user-attachments/assets/7534c508-f28c-4afa-8ec4-cb218d171379)  
 
+7) Go to frontend and try to delete some todo records and check inside mongo db databse tasks table , entry deleted successfully or not
 
+    ![image](https://github.com/user-attachments/assets/360284b2-5a69-4e75-9ed7-dae715b284cd)
+
+    ![image](https://github.com/user-attachments/assets/3e0c68ea-51f3-49d0-94df-9837c7dcecca)
+
+    ![image](https://github.com/user-attachments/assets/526a39a6-20fc-498a-ae1c-b11dd7aad08d)
+
+8) try to add and delete entry and check again
+
+   ![image](https://github.com/user-attachments/assets/3ea227d2-b633-4489-bb9c-987d1c9508ec)
+
+   ![image](https://github.com/user-attachments/assets/468d942e-91c9-4f97-b018-25069fcf729f)
+
+  ![image](https://github.com/user-attachments/assets/07323085-3e77-437b-9531-86fffbb8be91)
+
+<h1> Project Successfully complete </h1>
 
 
 
