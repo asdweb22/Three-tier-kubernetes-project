@@ -197,7 +197,7 @@ you will see frontend app
   ```bash
   docker run -d -p 3500:3500 three-tier-backend:latest
   ```
-  - to check backemnd run successfully or not
+  - to check backend run successfully or not
 
   ```bash
   docker logs backend_container_id
@@ -205,12 +205,49 @@ you will see frontend app
   
   docker run 
   ![image](https://github.com/user-attachments/assets/c68f39e0-4dcb-46cb-9a02-d14382ab8417)
+  
   Note: We will get a error which could not connect  mongo Db Database 
 
 
+### Step 10 : Rum Mangodb database using Deployment file
+
+Go to this location on CMD:
+root@ip-172-31-37-93:~/TWSThreeTierAppChallenge/Kubernetes-Manifests-file/Database#  
+
+Create Namespace and update in databse Deployment file
+
+ ```bash
+kubectl create namespace three-tier-ns
+```
+
+![image](https://github.com/user-attachments/assets/d20e11e2-625e-4150-a796-f347a5815545)
+
+
+![image](https://github.com/user-attachments/assets/cbc6a80c-07d8-4200-bd06-eaefbe8fb003)
+
+- Run deployment file of mongodb-database using follwing command
+
+```bash
+kubectl apply -f deployment.yaml -n three-tier-ns
+
+kubectl get pods -n three-tier-ns
+```
+
+![image](https://github.com/user-attachments/assets/0a33d0fc-411c-4958-8f3a-6b53fefe6c34)
+ Note: when u run command get pods, then you can see your POD will be in pending state because, we have to apply secrete file.
 
 
 
+- Run secrete file using command
+
+
+```bash
+kubectl apply -f secrets.yaml -n three-tier-ns
+````
+
+<h6>Note:</h6> make sure change namespace in secrete.yml file
+
+![image](https://github.com/user-attachments/assets/59de5c3b-28f0-4cb5-ba89-4c78ad8e9f85)
 
 
 
