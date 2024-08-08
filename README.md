@@ -18,6 +18,11 @@ The Kubernetes-Manifests-Files directory holds Kubernetes manifests for deployin
 - Kubectl, Ingress controller
 - Private ECR repositories for secure image management
 
+# Architecture of Kubernets Project
+
+![image](https://github.com/user-attachments/assets/8ef33172-2f5c-486b-9d69-cf20384a23d7)
+
+
 # Step 1: IAM Configuration
 
 Create a user eks-admin with AdministratorAccess.
@@ -133,11 +138,43 @@ kubectl get nodes
 
 ![image](https://github.com/user-attachments/assets/662d85a2-7f46-4657-b8e9-b07a0b866b66)
 
+
 ```bash
 git clone https://github.com/LondheShubham153/TWSThreeTierAppChallenge.git
 ```
 
 ![image](https://github.com/user-attachments/assets/1102afa5-7933-4536-bc40-233581e6d6f0)
+
+![image](https://github.com/user-attachments/assets/f2597023-6e97-4ef0-a3c3-17cc7dcc6e17)
+
+
+
+### Step 9: Create repositories on AWS ECR and push Image on ECR
+
+![image](https://github.com/user-attachments/assets/d28473e3-a5ae-4f71-9d2a-88ed28e05a95)
+
+![image](https://github.com/user-attachments/assets/64a8cf70-6b0e-4fec-a115-705cb1b5fb5d)
+
+run Bellow command step by step after creating reposotory on ECR
+
+![image](https://github.com/user-attachments/assets/388859ca-fd34-47f5-a919-3c2eecbbbfc9)
+
+create container using already created image
+
+![image](https://github.com/user-attachments/assets/0613b3f4-babf-4e14-b259-f134a01f65c6)
+
+
+Setup 3000 port in inbound rule of main instance 
+
+![image](https://github.com/user-attachments/assets/92361b10-c484-4d9d-896b-82b3824ceb21)
+
+copy public instance ip : 3000  on crome or any browser
+you will see frontend app
+
+![image](https://github.com/user-attachments/assets/c5435eee-fdff-44ea-a5ed-e7f999e03402)
+
+
+
 
 
 
