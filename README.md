@@ -1,4 +1,4 @@
-# Three-tier-kubernetes-project
+![image](https://github.com/user-attachments/assets/0d89ba02-5d1c-40b0-87f8-767eda4e4337)# Three-tier-kubernetes-project
 Based on tools like docker, kubernetes, Ec2, EKS, ECR, Cloud Formation,  frontend: React js, backend : Node js, Database: Mongo DB     
 
 Project repo reference : https://github.com/LondheShubham153/TWSThreeTierAppChallenge/blob/main/README.md
@@ -436,6 +436,54 @@ kubectl get deployment -n kube-system aws-load-balancer-controller
 ```
 
 ![image](https://github.com/user-attachments/assets/632379c5-720f-4cc2-ae0e-6755967e649d)
+
+
+![image](https://github.com/user-attachments/assets/1ec39229-9d78-479e-befb-fe676b9d8976)
+
+
+
+
+
+#Step 14: Run Ingress.yaml file
+
+Go to this location on CMD:
+root@ip-172-31-37-93:~/TWSThreeTierAppChallenge/Kubernetes-Manifests-file#
+
+```bash
+kubectl apply -f ingress.yaml -n three-tier-ns
+kubectl get ing -n three-tier-ns
+```
+
+![image](https://github.com/user-attachments/assets/ab2cde71-6e24-42ab-acda-49f8d45ab9a7)
+
+
+# Step 14: we need to create Hosted zone in Route 53 Aws Service 
+
+- create hosted zone
+
+  ![image](https://github.com/user-attachments/assets/8cfeaf40-6765-4f59-a186-330144b1fb2c)
+
+- exchange ns rocords of your hostinger with Route 53 Hosted zone
+
+  ex. Hosted zone Ns records   ->  Hostinger ns records
+  
+![image](https://github.com/user-attachments/assets/8bc4c001-f9c0-4d11-a64c-44fe0b766493)
+
+![image](https://github.com/user-attachments/assets/5287bdb6-8ed9-4369-81b9-164be897e3e4)
+
+- Create cname record in hosted zone
+   - provide sub-domain name : (challenge)
+   - provide your address of load balancer (k8s-threetie-mainlb-318ada61f9-1596259174.ap-south-1.elb.amazonaws.co)
+
+![image](https://github.com/user-attachments/assets/40361210-eadc-493a-a7a0-1da672a1f375)
+
+
+
+- Now hit domain name on chrome browser (**challenge.akshaydhongade.online**)
+- Create some operations on todo list app
+- and check in your database created entry is exist in database or not 
+
+
 
 
 
