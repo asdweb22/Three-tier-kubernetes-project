@@ -247,7 +247,120 @@ kubectl apply -f secrets.yaml -n three-tier-ns
 
 <h5 style="color:red;">Note:</h5>  make sure change namespace in secrete.yml file
 
-![image](https://github.com/user-attachments/assets/59de5c3b-28f0-4cb5-ba89-4c78ad8e9f85)
+![image](https://github.com/user-attachments/assets/786662e1-0b65-402f-9de1-1da821bc710b)
+
+<h5 style="color:red;">Note:</h5> After run secrets.yaml your databse pod will be create in running state 
+
+![image](https://github.com/user-attachments/assets/6c367745-5498-4f6b-bba2-d5591b8ed7bf)
+
+
+- Run service.yml file of database
+
+<h5 style="color:red;">Note:</h5>  make sure change namespace in secrete.yml file
+
+![image](https://github.com/user-attachments/assets/4fc5063c-50ac-47ee-a80b-5f5105cb8aa0)
+
+```bash
+kubectl apply -f service.yaml -n three-tier-ns
+
+kubectl get svc -n three-tier-ns
+````
+
+![image](https://github.com/user-attachments/assets/bcd3a7b5-5bf3-472c-bee0-285a0c312b4e)
+
+
+
+### Step 11 : Run Backend deployment.yml and service.yml file 
+
+Go to this location on CMD:
+root@ip-172-31-37-93:~/TWSThreeTierAppChallenge/Kubernetes-Manifests-file/Backend#
+
+<h5 style="color:red;">Note:  open deplyment.yml file and change your Imange ID in file, copy backend-imaage from ECR
+
+  ![image](https://github.com/user-attachments/assets/2a4a873d-1b0a-4625-9476-0298533f4718)
+
+  ![image](https://github.com/user-attachments/assets/85e1426c-b3e9-4b36-a058-c11e6ea4f6d2)
+
+
+  ![image](https://github.com/user-attachments/assets/585d43a6-d649-489e-8ce6-eb714dc8dfa9)
+
+
+<h5 style="color:red;">Note:</h5>  make sure change namespace in secrete.yml file
+
+  ![image](https://github.com/user-attachments/assets/981cfe80-bd04-4b29-be41-9d7e8c2fef64)
+
+
+- Now run deployment.yml file using following command
+
+```bash
+kubectl apply -f deployment.yml -n three-tier-ns
+
+kubectl get deployment -n three-tier-ns
+````
+
+![image](https://github.com/user-attachments/assets/90cc43f7-cf20-4596-9a47-504c8858b928)
+
+
+- Run service.yml file of backend
+
+- <h5 style="color:red;">Note:</h5>  make sure change namespace in secrete.yml file
+
+```bash
+kubectl apply -f service.yml -n three-tier-ns
+
+kubectl get svc -n three-tier-ns
+````
+![image](https://github.com/user-attachments/assets/8a33147e-3c94-4fa9-95a2-02b92dd99a61)
+
+
+- Check your databse connect to your backend
+
+```bash
+kubectl logs api-76b4897595-fx2th -n three-tier-ns
+```
+
+![image](https://github.com/user-attachments/assets/31201bad-2acc-4582-993a-bb30fe9ec53a)
+
+
+
+
+### Step 12 : Run Frontend deployment.yml and service.yml file 
+
+Go to this location on CMD:
+root@ip-172-31-37-93:~/TWSThreeTierAppChallenge/Kubernetes-Manifests-file/Frontend
+
+<h5 style="color:red;">Note:  open deplyment.yml file and change your Imange ID in file and, copy backend-imaage from ECR and mention domain name with subdomain
+
+![image](https://github.com/user-attachments/assets/a5fbe2df-52c1-42d7-8a75-c65325c93a2c)
+
+  
+![image](https://github.com/user-attachments/assets/11c001d8-86d4-472e-814c-3035a2565b55)
+
+- Run Deployment.yaml and service.yaml file of frontend
+
+```bash
+kubectl apply -f deployment.yml -n three-tier-ns
+
+kubectl get deployment -n three-tier-ns
+````
+
+```bash
+kubectl apply -f service.yml -n three-tier-ns
+
+kubectl get svc -n three-tier-ns
+````
+
+![image](https://github.com/user-attachments/assets/6fb95572-977b-47e3-aaaf-66ec76d99b21)
+
+<h5 style="color:red;">Note: till now frontend pod is running state , backend and databse is now running properly and connected to each other
+
+  
+
+
+
+
+
+
 
 
 
