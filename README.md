@@ -159,13 +159,15 @@ run Bellow command step by step after creating reposotory on ECR
 
 ![image](https://github.com/user-attachments/assets/388859ca-fd34-47f5-a919-3c2eecbbbfc9)
 
-create container using already created image
+create container using already created fronend image
 
-![image](https://github.com/user-attachments/assets/0613b3f4-babf-4e14-b259-f134a01f65c6)
 
 ```bash
   docker run -d -p 3000:3000 three-tier-frontend:latest 
 ```
+
+![image](https://github.com/user-attachments/assets/0613b3f4-babf-4e14-b259-f134a01f65c6)
+
 
 Setup 3000 port in inbound rule of main instance 
 
