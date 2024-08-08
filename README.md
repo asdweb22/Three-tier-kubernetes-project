@@ -33,11 +33,14 @@ Generate Security Credentials: Access Key and Secret Access Key.
 
 ```bash
 Launch an Ubuntu instance in your favourite region (eg. region ap-south-1).
+```
 
 ![image](https://github.com/user-attachments/assets/bff7b9b5-713b-458c-8304-ef784be064eb)
 ![image](https://github.com/user-attachments/assets/31ce0327-fd63-42e6-a946-007692b4f560)
 ![image](https://github.com/user-attachments/assets/a7488d22-4649-4798-98b0-8c544731df5a)
 ![image](https://github.com/user-attachments/assets/14dd20ad-3f91-40e8-91f4-5e0642b64ac4)
+
+
 
 
 SSH into the instance from your local machine.
