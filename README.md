@@ -206,7 +206,7 @@ you will see frontend app
   docker run 
   ![image](https://github.com/user-attachments/assets/c68f39e0-4dcb-46cb-9a02-d14382ab8417)
   
-  Note: We will get a error which could not connect  mongo Db Database 
+ <h5>Note:</h5>  We will get a error which could not connect  mongo Db Database 
 
 
 ### Step 10 : Rum Mangodb database using Deployment file
@@ -234,7 +234,7 @@ kubectl get pods -n three-tier-ns
 ```
 
 ![image](https://github.com/user-attachments/assets/0a33d0fc-411c-4958-8f3a-6b53fefe6c34)
- Note: when u run command get pods, then you can see your POD will be in pending state because, we have to apply secrete file.
+ <h5>Note:</h5>  when u run command get pods, then you can see your POD will be in pending state because, we have to apply secrete file.
 
 
 
@@ -245,7 +245,7 @@ kubectl get pods -n three-tier-ns
 kubectl apply -f secrets.yaml -n three-tier-ns
 ````
 
-<h6>Note:</h6> make sure change namespace in secrete.yml file
+<h5 color="red">Note:</h5>  make sure change namespace in secrete.yml file
 
 ![image](https://github.com/user-attachments/assets/59de5c3b-28f0-4cb5-ba89-4c78ad8e9f85)
 
