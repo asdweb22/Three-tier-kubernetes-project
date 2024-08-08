@@ -29,6 +29,8 @@ Generate Security Credentials: Access Key and Secret Access Key.
 ![image](https://github.com/user-attachments/assets/a736221d-1273-42ba-8d63-b1d5a79d15fc)
 
 
+
+
 # Step 2: EC2 Setup
 
 ```bash
@@ -46,6 +48,8 @@ SSH into the instance from your local machine.
 ![image](https://github.com/user-attachments/assets/45d51d57-31df-4a7d-9994-5db5f52089c1)
 
 
+
+
 # Step 3: Install AWS CLI v2
 
 ```bash
@@ -61,6 +65,7 @@ sudo ./aws/install
 
 
 
+
 ### Step 4: Install Docker
 
 ```bash
@@ -69,6 +74,8 @@ sudo apt install docker.io
 ```
 
 ![image](https://github.com/user-attachments/assets/9c43f22d-94d4-4718-a12d-c1782b592741)
+
+
 
 
 ### Step 5: Install kubectl
@@ -83,6 +90,8 @@ kubectl version --short --client
 ![image](https://github.com/user-attachments/assets/80fe0cf6-a5e3-4e96-9450-8bd8c95f05cc)
 
 
+
+
 ### Step 6: Install eksctl
 
 ```bash
@@ -95,6 +104,8 @@ eksctl version
 
 
 
+
+
 ### Step 7: configure aws
 
 ```bash
@@ -104,13 +115,22 @@ aws configure
 ![image](https://github.com/user-attachments/assets/e8132954-2fb6-42a6-a869-4ac2769aba76)
 
 
+
+
 ### Step 8: Setup EKS Cluster
 
 ```bash
-eksctl create cluster --name three-tier-cluster --region us-west-2 --node-type t2.medium --nodes-min 2 --nodes-max 2
-aws eks update-kubeconfig --region us-west-2 --name three-tier-cluster
+eksctl create cluster --name three-tier-cluster --region ap-south-1 --node-type t2.medium --nodes-min 2 --nodes-max 2
+aws eks update-kubeconfig --region ap-south-1 --name three-tier-cluster
 kubectl get nodes
 ```
+
+![image](https://github.com/user-attachments/assets/ec627053-d39b-4879-a439-b0e44d6804f3)
+![image](https://github.com/user-attachments/assets/af4d9ac5-7d21-426a-bcc3-7674b357e533)
+
+
+
+
 
 
 
