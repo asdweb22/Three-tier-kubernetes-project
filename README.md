@@ -23,7 +23,7 @@ The Kubernetes-Manifests-Files directory holds Kubernetes manifests for deployin
 ![image](https://github.com/user-attachments/assets/8ef33172-2f5c-486b-9d69-cf20384a23d7)
 
 
-# Step 1: IAM Configuration
+### Step 1: IAM Configuration
 
 Create a user eks-admin with AdministratorAccess.
 
@@ -36,7 +36,7 @@ Generate Security Credentials: Access Key and Secret Access Key.
 
 
 
-# Step 2: EC2 Setup
+### Step 2: EC2 Setup
 
 - Launch an Ubuntu instance in your favourite region (eg. region ap-south-1).
 
@@ -53,7 +53,7 @@ SSH into the instance from your local machine.
 
 
 
-# Step 3: Install AWS CLI v2
+### Step 3: Install AWS CLI v2
 
 ```bash
 sudo -i
