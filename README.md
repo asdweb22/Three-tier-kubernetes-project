@@ -38,9 +38,7 @@ Generate Security Credentials: Access Key and Secret Access Key.
 
 # Step 2: EC2 Setup
 
-```bash
-Launch an Ubuntu instance in your favourite region (eg. region ap-south-1).
-```
+- Launch an Ubuntu instance in your favourite region (eg. region ap-south-1).
 
 ![image](https://github.com/user-attachments/assets/bff7b9b5-713b-458c-8304-ef784be064eb)
 ![image](https://github.com/user-attachments/assets/31ce0327-fd63-42e6-a946-007692b4f560)
