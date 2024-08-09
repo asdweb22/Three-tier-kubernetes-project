@@ -20,7 +20,7 @@ The Kubernetes-Manifests-Files directory holds Kubernetes manifests for deployin
 
 # Architecture of Kubernets Project
 
-![image](https://github.com/user-attachments/assets/8ef33172-2f5c-486b-9d69-cf20384a23d7)
+![image](https://github.com/user-attachments/assets/8ef33172-2f5c-486b-9d69-cf20384a23d7
 
 
 # Step 1: IAM Configuration
